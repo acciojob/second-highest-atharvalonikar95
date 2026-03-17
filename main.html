@@ -10,6 +10,15 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			let firstH=-Infinity
+			let secondH=-Infinity
+			for(let i=0;i<arr.length;i++){
+				if(arr[i]>firstH){
+					secondH=firstH
+					firstH=arr[i]
+				}
+			}
+			return secondH
 			
 		}
 
