@@ -11,7 +11,7 @@
 		function secondHighest(arr) {
 			//Write your code here
 			if(arr.length<2){
-				return -1
+				return -Infinity
 			}			
 			let firstH=-Infinity
 			let secondH=-Infinity
@@ -19,6 +19,8 @@
 				if(arr[i]>firstH){
 					secondH=firstH
 					firstH=arr[i]
+				}else if (arr[i] > secondH && arr[i] !== firstH) {
+				      secondH = arr[i];
 				}
 			}
 			return secondH
